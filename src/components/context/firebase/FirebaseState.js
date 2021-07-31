@@ -3,7 +3,7 @@ import { FirebaseContext } from "./firebaseContext";
 import { firebaseReducer } from "./firebasereducer";
 import axios from "axios";
 import { ADD_NOTE, FETCH_NOTES, REMOVE_NOTE, SHOW_LOADER } from "../types";
-const url = process.env.REACT_APP_DB_URL;
+const url = "https://react-hooks-fef45-default-rtdb.firebaseio.com";
 
 export const FirebaseState = ({ children }) => {
   const initialState = {
@@ -48,6 +48,7 @@ export const FirebaseState = ({ children }) => {
       throw new Error(error.message);
     }
   };
+
   const removeNote = async (id) => {
     await axios.delete(`${url}/notes/${id}.json`);
     dispatch({

@@ -15,6 +15,11 @@ export const NavBar = () => (
           Информация
         </NavLink>
       </li>
+       <li className='nav-item'>
+        <NavLink className='nav-link' to='/contacts'>
+          Контакты
+        </NavLink>
+      </li>
     </ul>
 
   </nav>
